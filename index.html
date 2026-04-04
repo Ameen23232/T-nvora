@@ -10,17 +10,16 @@
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
     
     <style>
-        /* =========================================
-           [1] الأساسيات ومنع النسخ (Core Styles)
-           ========================================= */
-        body {
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            margin: 0;
+            padding: 0;
             background-color: var(--bg-deep);
             color: var(--text-high);
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -77,8 +76,6 @@
         body.mode-8 { --primary: #2dd4bf; --bg-deep: #021a1a; --text-high: #f0fdfa; --text-mid: #5eead4; --mesh-gradient: radial-gradient(circle, #042f2e 0%, #021a1a 100%); --primary-glow: rgba(45,212,191,0.4); }
         body.mode-9 { --primary: #94a3b8; --bg-deep: #0f172a; --text-high: #f1f5f9; --text-mid: #64748b; --mesh-gradient: radial-gradient(circle, #1e293b 0%, #0f172a 100%); --primary-glow: rgba(148,163,184,0.4); }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; outline: none !important; -webkit-tap-highlight-color: transparent; }
-
         .reveal {
             opacity: 0;
             transform: translateY(40px) scale(0.98);
@@ -101,7 +98,6 @@
             transform: scale(1.02);
             text-shadow: 0 0 12px var(--primary), 0 0 22px var(--primary-glow);
             color: var(--primary);
-            transition: all 0.25s var(--ease-long);
         }
 
         .logo-glow {
@@ -510,227 +506,4 @@
         <section class="hero">
             <h1 class="logo-glow reveal">Tènvora</h1>
             <p class="hero-desc reveal">
-                نحن لسنا مجرد مبرمجين عاديين؛ نحن مجموعة من المبدعين الذين يحولون الأفكار إلى واقع رقمي نابض بالحياة، نصيغ المستقبل بأسطر من الكود المسحور.
-            </p>
-            <div class="img-container reveal">
-                <img id="imgHero" src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Digital creation abstract art">
-            </div>
-            <p class="reveal"> نتخصص في إنشاء المواقع الإلكترونية التي تجمع بين الجماليات العصرية والأداء التقني القوي، حيث نتميز بـ الدقة في التنفيذ وكأن كل موقع هو تحفة فنية فريدة تحكي قصتك الرقمية.</p>
-        </section>
-
-        <section>
-            <h2 class="highlight-text reveal">
-                نحن نسابق الزمن لنمنحك الصدارة في عالم الأعمال، حيث الوقت هو أثمن ما تملك، ونضمن لك السرعة في الإنجاز دون التضحية أبداً بجودة العمل.
-            </h2>
-            <div class="img-container reveal">
-                <img id="imgBusiness" src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Fast paced digital business">
-            </div>
-            <div class="grid">
-                <div class="card reveal">
-                    <h3>آراء عملائنا المشرفة</h3>
-                    <p>لا نكتفي بادعاء التميز، بل نثبت ذلك من خلال آراء عملائنا الذين هم خير دليل على جودة شراكتنا.</p>
-                    <div style="color: gold; margin-top: 15px; font-size: 20px;">★★★★★</div>
-                </div>
-                <div class="card reveal">
-                    <h3>الحقيقة والأفضلية المطلقة</h3>
-                    <p>نحن الأفضل حقيقةً، وتجارب من تعاملوا معنا ووثقوا بخبراتنا هي الشاهد القوي.</p>
-                </div>
-                <div class="card reveal">
-                    <h3>دعم ما بعد الإطلاق المستمر</h3>
-                    <p>رحلتنا تبدأ معك بعد الاستلام، حيث نوفر لك حماية ودعماً تقنياً يضمن استمرار تألقك.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="highlight-text reveal">
-                ولأن خدماتنا لا تتوقف عند البرمجة فقط، فنحن نصنع لك تجربة رقمية متكاملة قبل بناء الموقع، حيث يلتقي الإبداع البصري مع الدقة البرمجية لضمان تماسك علامتك.
-            </h2>
-            <div class="img-container reveal">
-                <img id="imgVisual" src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Creative visual design">
-            </div>
-            <div class="card reveal" style="width: 100%; border-right: 5px solid var(--primary); text-align: center;">
-                <p style="font-size: 20px;">مهمتنا هي أن نجعلك تبرز بين منافسيك من خلال واجهة احترافية الرقمي لبناء تاريخ نجاحك غداً.</p>
-            </div>
-        </section>
-
-        <section>
-            <div class="img-container reveal">
-                <img id="imgCoding" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Creative coding development">
-            </div>
-            <p class="reveal" style="font-size: 22px; font-weight: 700; color: var(--accent); margin: 30px 0;">"نتعامل مع كل مشروع وكأنه مشروعنا الشخصي، نمنحه من الاهتمام ما يضمن نجاحه."</p>
-            <p class="reveal">رؤيتك هي وقود إلهامنا، ونحن نعرف كيف نترجم احتياجاتك إلى كود سليم وتصميم مبهر الرقمي لبناء تاريخ نجاحك غداً.</p>
-        </section>
-
-        <section>
-            <div class="card reveal" style="width: 100%; border: 2px dashed var(--primary); background: transparent; box-shadow: none;">
-                <p>نقدم حلولاً مرنة تناسب جميع الميزانيات، مع ضمان الجودة العالية التي تستحقها، ونحن معك بكل خطوة، نرسم ونبرمج ونبدع الرقمي لبناء تاريخ نجاحك غداً.</p>
-            </div>
-
-            <h2 class="highlight-text reveal" style="font-size: 48px; margin-top: 80px;">إذا كنت تبحث عن الدقة، السرعة، السعر المنافس، والإبداع البصري، فقد وجدته.</h2>
-            <p class="reveal" style="font-size: 32px; color: var(--primary); font-weight: 900;">TÈNVORA: نكتب المستقبل اليوم لبناء تاريخ نجاحك غداً.</p>
-            <p class="reveal">تواصل معنا اليوم؛ لنصنع معاً هويتك الرقمية ونطلق موقعك إلى آفاق النجاح الرقمي لبناء تاريخ نجاحك غداً.</p>
-
-            <div class="reveal" style="margin-top: 60px;">
-                <button class="btn-neon" onclick="toggleModal(true)">اعمالنا</button>
-            </div>
-
-            <div class="social-dock reveal">
-                <a href="https://wa.me/201207847074" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
-                <a href="https://instagram.com/tenvora.dev" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
-                <a href="https://www.facebook.com/share/18KBnYSSDu/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook"></a>
-            </div>
-            
-            <footer class="reveal">Tènvora Group © 2026 لبناء تاريخ نجاحك غداً</footer>
-        </section>
-    </main>
-
-    <div class="modal" id="modal" style="position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(30px); display: none; align-items: center; justify-content: center; z-index: 3000; padding: 20px;">
-        <div class="modal-box">
-            <h2 style="color: var(--primary); font-size: 28px; margin-bottom: 20px;">معرض الفخر الرقمي</h2>
-            <div class="work-list">
-                <a href="https://hurghada-egypt.com" target="_blank" class="work-item">hurghada-egypt.com</a>
-                <a href="https://apptree.fr" target="_blank" class="work-item">apptree.fr</a>
-                <a href="https://emanalraddadi.com" target="_blank" class="work-item">emanalraddadi.com</a>
-                <a href="https://arkancity.com" target="_blank" class="work-item">arkancity.com</a>
-                <a href="https://mutobastours.com" target="_blank" class="work-item">mutobastours.com</a>
-                <a href="https://tatra-kw.com" target="_blank" class="work-item">tatra-kw.com</a>
-                <a href="https://mjdesign.com.sa" target="_blank" class="work-item">mjdesign.com.sa</a>
-                <a href="https://emg-ksa.com" target="_blank" class="work-item">emg-ksa.com</a>
-            </div>
-            <button onclick="toggleModal(false)" style="margin-top: 30px; background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 15px; border-radius: 15px; cursor: pointer; font-weight: bold; width: 100%;">إغلاق</button>
-        </div>
-    </div>
-
-    <a href="https://wa.me/201207847074" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="35">
-    </a>
-
-    <script>
-        // ============= إعدادات Firebase =============
-        // 🔥 IMPORTANT: استبدل هذه البيانات ببيانات مشروعك من Firebase Console
-        const firebaseConfig = {
-            apiKey: "AIzaSyBxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-            authDomain: "your-project.firebaseapp.com",
-            databaseURL: "https://your-project-default-rtdb.firebaseio.com",
-            projectId: "your-project",
-            storageBucket: "your-project.appspot.com",
-            messagingSenderId: "123456789012",
-            appId: "1:123456789012:web:abcdef123456"
-        };
-
-        // تهيئة Firebase
-        let db = null;
-        try {
-            firebase.initializeApp(firebaseConfig);
-            db = firebase.database();
-            console.log("✅ Firebase connected successfully");
-        } catch(e) {
-            console.warn("⚠️ Firebase not configured, using localStorage fallback");
-        }
-
-        // تسجيل الزيارة في قاعدة البيانات
-        async function trackVisit() {
-            const today = new Date().toISOString().split('T')[0];
-            const visitData = {
-                timestamp: Date.now(),
-                page: window.location.pathname,
-                referrer: document.referrer || 'direct',
-                userAgent: navigator.userAgent.substring(0, 100)
-            };
-            
-            if (db) {
-                try {
-                    // زيادة عدد الزيارات الكلي
-                    const totalRef = db.ref('analytics/totalVisits');
-                    totalRef.transaction(current => (current || 0) + 1);
-                    
-                    // تسجيل الزيارة اليومية
-                    const dailyRef = db.ref(`analytics/dailyVisits/${today}`);
-                    dailyRef.transaction(current => (current || 0) + 1);
-                    
-                    // تسجيل تفاصيل الزيارة (آخر 100 زيارة)
-                    const visitsRef = db.ref('analytics/recentVisits').limitToLast(100);
-                    visitsRef.push(visitData);
-                    
-                    console.log("✅ Visit tracked to Firebase");
-                } catch(e) { console.warn("Track error:", e); }
-            } else {
-                // localStorage fallback
-                let total = localStorage.getItem('totalVisits') || 0;
-                localStorage.setItem('totalVisits', parseInt(total) + 1);
-                let daily = localStorage.getItem(`daily_${today}`) || 0;
-                localStorage.setItem(`daily_${today}`, parseInt(daily) + 1);
-            }
-        }
-
-        // معالجة روابط الإحالة
-        function handleReferral() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const refId = urlParams.get('ref');
-            const campaign = urlParams.get('campaign');
-            
-            if (refId && db) {
-                db.ref(`referrals/${refId}/clicks`).transaction(current => (current || 0) + 1);
-                db.ref(`referrals/${refId}/lastClick`).set(Date.now());
-                if (campaign) {
-                    db.ref(`referrals/${refId}/campaign`).set(campaign);
-                }
-                console.log("✅ Referral tracked:", refId);
-            }
-        }
-
-        // موضوعات الصور
-        const themeImageSets = {
-            0: ["https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"],
-            1: ["https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"],
-            2: ["https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/1142962/pexels-photo-1142962.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"],
-            3: ["https://images.pexels.com/photos/175039/pexels-photo-175039.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/1181243/pexels-photo-1181243.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"],
-            4: ["https://images.pexels.com/photos/1025469/pexels-photo-1025469.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/3183154/pexels-photo-3183154.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/21696/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"],
-            5: ["https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/262488/pexels-photo-262488.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/1350197/pexels-photo-1350197.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"],
-            6: ["https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"],
-            7: ["https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"],
-            8: ["https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"],
-            9: ["https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop","https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"]
-        };
-
-        function updateThemeImages(modeIndex) {
-            const images = themeImageSets[modeIndex];
-            if (!images) return;
-            const imgs = ['imgHero', 'imgBusiness', 'imgVisual', 'imgCoding'];
-            imgs.forEach((id, i) => { if(document.getElementById(id)) document.getElementById(id).src = images[i]; });
-        }
-
-        function setTheme(modeIndex) {
-            document.body.className = modeIndex !== 0 ? 'mode-' + modeIndex : '';
-            updateThemeImages(modeIndex);
-            document.getElementById('themeCtrl').classList.remove('active');
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => e.target.classList.toggle('active', e.isIntersecting));
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        function toggleModal(isOpen) {
-            const modal = document.getElementById('modal');
-            modal.style.display = isOpen ? 'flex' : 'none';
-            document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-        }
-
-        window.addEventListener('click', (e) => {
-            if (e.target === document.getElementById('modal')) toggleModal(false);
-            if (!document.getElementById('themeCtrl').contains(e.target)) 
-                document.getElementById('themeCtrl').classList.remove('active');
-        });
-
-        // ============= تشغيل نظام التتبع =============
-        setTimeout(() => {
-            trackVisit();
-            handleReferral();
-        }, 500);
-        
-        updateThemeImages(0);
-    </script>
-</body>
-</html>
+                نحن لسنا مجرد مبرمجين عاديين؛ نحن مجموعة من المبدعين الذين يحولون الأفكار إلى واقع رقمي نابض بالحياة، نص
